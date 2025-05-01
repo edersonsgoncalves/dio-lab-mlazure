@@ -19,10 +19,12 @@ O objetivo era fazer uma predição, baseado no modelo de **Regressão** (dados 
 Após o upload da base de dados, foi iniciada a configuração dos parâmetros e máquinas virtuais para realizar a análise dos dados.
 
 <img src="imgs/IMML-04.png">
+
 ## O Algoritmo Mais Ajustado
 Após a analise, o algoritmo com o melhor desempenho foi o *VotingEnsemble*. 
 
 <img src="imgs/IMML-05.png">
+
 Dessa forma, entrei no algoritmo e rodei a implementação do *Ponto de Extremidade* (Endpoint) em *Tempo Real* (Real-time), que se refere a disponibilização do modelo de aprendizado de máquina para uso imediato, permitindo receber solicitações e realizando previsões em tempo real. 
 <img src="imgs/IMML-06.png">
 
@@ -41,6 +43,7 @@ Ao finalizar o preenchimento do forumulário, notei que havia um *Q&A Assist*. D
 <img src="imgs/IMML-08.png">
 
 Foi então que ele me retornou com o artigo [**Unable to deploy real time endpoint**](https://learn.microsoft.com/en-us/answers/questions/2028895/unable-to-deploy-real-time-endpoint) em que o usuário [**YutongTie-MSFT**](https://learn.microsoft.com/en-us/users/na/?userid=ad870133-9538-4d77-adc8-2b5ffc5c1b45) postou sobre alguns recursos que deveriam estar ativados na *Subscription*.
+
 <img src="imgs/IMML-09.png">
 
 Ao ativar esses recursos e refazer o teste, obtive sucesso no *Deployment* e o modelo rodou sem mais problemas.
