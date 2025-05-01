@@ -1,14 +1,15 @@
+# Implementação Modelagem Machine Learning
 Este repositório busca documentar uma implementação da Modelagem em Machine Learning Azure trazendo os passos executados. 
   
 ## Passos Iniciais
 Criação do acesso ao Portal Azure (www.portal.azure.com);
-![[IMML-01.png]]
+<img src="imgs/IMML-01.png">
 
 Criação da Subscrição
-![[IMML-02.png]]
+<img src="imgs/IMML-02.png">
 
 Acesso ao Azure Machine Learning Studio (www.ml.azure.com)
-![[IMML-03.png]]
+<img src="imgs/IMML-03.png">
 
 ## Acesso ao Conjunto de Dados
 Foi fornecido um conjunto de dados baseados na quantidade de aluguéis de bicicleta em um dado período.
@@ -17,17 +18,17 @@ O objetivo era fazer uma predição, baseado no modelo de **Regressão** (dados 
 ## Configuração dos parâmetros
 Após o upload da base de dados, foi iniciada a configuração dos parâmetros e máquinas virtuais para realizar a análise dos dados.
 
-![[IMML-04.png]]
+<img src="imgs/IMML-04.png">
 ## O Algoritmo Mais Ajustado
 Após a analise, o algoritmo com o melhor desempenho foi o *VotingEnsemble*. 
 
-![[IMML-05.png]]
+<img src="imgs/IMML-05.png">
 Dessa forma, entrei no algoritmo e rodei a implementação do *Ponto de Extremidade* (Endpoint) em *Tempo Real* (Real-time), que se refere a disponibilização do modelo de aprendizado de máquina para uso imediato, permitindo receber solicitações e realizando previsões em tempo real. 
-![[IMML-06.png]]
+<img src="imgs/IMML-06.png">
 
 ## O Fatídico Erro
 Após a configuração dos parâmetros, reserva da máquina virtual e início do *deployment*, o sistema passou a exibir um erro mas sem informações do motivo de ter gerado esse erro. 
-![[IMML-07.png]]
+<img src="imgs/IMML-07.png">
 Realizei busca incialmente na documentação da Azure, mas como não tinha a relação do motivo da falha, não tive retorno produtivo.
 Removi todos os dados e refiz os passos da aplicação por cerca de 5 vezes..
 Nesse processo, tentei alterar diversos parâmetros mas sempre caia nesse mesmo erro.
@@ -37,13 +38,13 @@ Entrei no Microsoft Learn na intenção de Abrir um Ticket para a comunidade, a 
 
 Ao finalizar o preenchimento do forumulário, notei que havia um *Q&A Assist*. Daí cliquei em **Find Similar Questions** já totalmente desacreditado de achar algo.
 
-![[IMML-08.png]]
+<img src="imgs/IMML-08.png">
 
 Foi então que ele me retornou com o artigo [**Unable to deploy real time endpoint**](https://learn.microsoft.com/en-us/answers/questions/2028895/unable-to-deploy-real-time-endpoint) em que o usuário [**YutongTie-MSFT**](https://learn.microsoft.com/en-us/users/na/?userid=ad870133-9538-4d77-adc8-2b5ffc5c1b45) postou sobre alguns recursos que deveriam estar ativados na *Subscription*.
-![[IMML-09.png]]
+<img src="imgs/IMML-09.png">
 
 Ao ativar esses recursos e refazer o teste, obtive sucesso no *Deployment* e o modelo rodou sem mais problemas.
-![[IMML-10.png]]
+<img src="imgs/IMML-10.png">
 
 ## Resultado da Previsão
 Abaixo compartilho o JSON do modelo e o retorno gerado.
